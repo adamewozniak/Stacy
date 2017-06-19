@@ -1,0 +1,17 @@
+say hi,say hello,hi,hi stacy,
+output("hello!")
+
+delete temp,delete temporary files,remove temporary files, clear temporary
+deleteFolder("temp/")
+
+get weather,how is it outside,how is it outside today,what is the weather,whats the weather
+weather_handler.weatherAll()
+
+get temperature,how hot is it,how cold is it,temperature,what is the current temperature
+weather_handler.tempOut()
+
+get wind speed,how is the wind
+weather_handler.windOut()
+
+get humidity,how humid is it, how humid is it out
+weather_handler.humidOut()

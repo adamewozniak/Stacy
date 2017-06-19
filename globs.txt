@@ -1,0 +1,4 @@
+WILL_SPEAK
+True
+LOC_HERE
+Las Vegas,NV
