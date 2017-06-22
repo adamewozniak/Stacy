@@ -2,9 +2,6 @@ certifi==2017.4.17
 chardet==3.0.3
 click==6.7
 decorator==4.0.11
-Django==1.11.2
-geocoder==1.22.6
-geopy==1.11.0
 github3.py==0.9.6
 gTTS==1.2.0
 gTTS-token==1.1.1
@@ -14,8 +11,6 @@ PyAudio==0.2.11
 pygame==1.9.3
 pyglet==1.2.4
 pyowm==2.6.1
-python-vlc==1.1.2
-pyttsx==1.1
 pytz==2017.2
 ratelim==0.1.6
 requests==2.17.3
