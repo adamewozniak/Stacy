@@ -9,7 +9,7 @@ from gtts import gTTS
 import pyglet
 from pygame import mixer
 import pygame 
-
+import audio_handler
 from audio_handler import say
 
 def deleteFolder(folder):
@@ -25,7 +25,7 @@ def deleteFolder(folder):
     output("Temporary files deleted.")
 
 def readGlobals(globalreq):
-    with open("globs.txt") as search:
+    with open("svs/sysRead/globs.txt") as search:
         lines = search.readlines()
         #strips entire array of rightspace
         for i in range(0, len(lines)):
@@ -43,3 +43,36 @@ def output(var):
         say(var)
     else:
         print(var)
+        
+def listenin():
+    r = sr.Recognizer()
+
+    with sr.Microphone() as source:
+        audio = r.listen(source)
+        try:
+            lis = r.recognize_google(audio)
+        except sr.UnknownValueError:
+            output("Stacy could not understand you. Please try again!")
+        except sr.RequestError as e:
+            output("Could not access Stacy's database; {0}".format(e))    
+    return lis
+
+def notListenin():
+    x = input()
+    return x
+"""
+HEAR IS CALLED WHENEVER A FUNCTION NEEDS SEPARATE INPUT
+IT READS IN GLOBALS FROM GLOBS.TXT TO SEE IF IT WILL USE VOICE
+RECOGNITION, OR TEXT INPUT
+"""
+
+def hear(outty):
+    
+    output(outty)
+    if readGlobals("WILL_SPEAK") == "True":
+        audio_handler.playThis("listening.mp3")
+        ret = listenin()
+    else:
+        ret = notListenin()
+    
+    return ret

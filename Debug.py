@@ -1,6 +1,7 @@
 import tweepy
 import time
 
+from SysCommands import output
 #Countdown is pretty much a live time.sleep printout, which rewrites over its output
 def countdown(p,q):
     i=p
@@ -24,6 +25,6 @@ def countdown(p,q):
     
 #Log allows the print command and the write-to command to be called in the same statement. Quite helpful in a bunch of diffferent programs
 def log(logging, fileCom):
-    prefix = ">> "
-    print(prefix + logging)
+    prefix = ""
+    output(prefix + logging)
     fileCom.write(prefix + logging + "\n")

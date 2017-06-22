@@ -1,5 +1,9 @@
-say hi,say hello,hi,hi stacy,
+###COMMANDS HERE ARE INCREDIBLY BASIC
+hi,hello,hi stacy
 output("hello!")
+
+whats up,what's up,how are you, how you doin, wassup,
+output("I'm doing well thank you")
 
 delete temp,delete temporary files,remove temporary files, clear temporary
 deleteFolder("temp/")
@@ -15,3 +19,9 @@ weather_handler.windOut()
 
 get humidity,how humid is it, how humid is it out
 weather_handler.humidOut()
+
+unfollow people
+twitter_handler.unfollow_all()
+
+tweet something,tweet for me,tweet
+twitter_handler.tweetThis()

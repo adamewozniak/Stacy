@@ -10,26 +10,32 @@ import os, shutil
 from random import *
 import time
 
+#imports are installed
 import speech_recognition as sr
 from gtts import gTTS
 import pyglet
 from pygame import mixer
 import pygame 
+import tweepy
 
-#THESE ARE THE INCLUDED PYTHON MODULES FOR STACY
+#THESE ARE USED WITHIN STACY
 from audio_handler import say
+from SysCommands import output
 from audio_handler import playThis
 from SysCommands import deleteFolder
 from SysCommands import readGlobals
-import weather_handler
-from SysCommands import output
+import SysCommands
 
-    
+#THESE ARE THE INCLUDED PYTHON MODULES FOR STACY
+
+import weather_handler
+import twitter_handler
+
 def fileSearcher(command):
     #output("Command recieved : " + command)
     #output(command) 
     lili = []
-    with open("coms.txt") as search:
+    with open("svs/sysRead/coms.txt") as search:
         lines = search.readlines()
         #strips entire array of rightspace
         for i in range(0, len(lines)):
@@ -42,7 +48,9 @@ def fileSearcher(command):
             #output(lili)
             
             if command in lili:
-                exec(lines[i+1])
+                comTemp = lines[i+1].split(",")
+                for x in comTemp:
+                    exec(x)
                 return True
     return False
         
@@ -83,6 +91,7 @@ def main():
             try:
                 
                 command = r.recognize_google(audio)
+                #OUTPUT HELPS TO SHOW COMMAND RECIEVED: 
                 #output(command)
                 if 'stacy' in command.lower():
                     startUp()
@@ -100,4 +109,7 @@ def typeTester():
         if not wasFound:
             output("Command not available")
 
-main()
+if readGlobals("TALK") == "True":
+    main()
+else:
+    typeTester()
