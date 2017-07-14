@@ -1,4 +1,3 @@
-###COMMANDS HERE ARE INCREDIBLY BASIC
 hi,hello,hi stacy
 output("hello!")
 
@@ -8,7 +7,7 @@ output("I'm doing well thank you")
 delete temp,delete temporary files,remove temporary files, clear temporary
 deleteFolder("temp/")
 
-get weather,how is it outside,how is it outside today,what is the weather,whats the weather
+get weather,how is it outside,how is it outside today,what is the weather,whats the weather,hows the weather
 weather_handler.weatherAll()
 
 get temperature,how hot is it,how cold is it,temperature,what is the current temperature
@@ -25,3 +24,12 @@ twitter_handler.unfollow_all()
 
 tweet something,tweet for me,tweet
 twitter_handler.tweetThis()
+
+follow followers
+twitter_handler.follow_followers()
+
+follow random people
+twitter_handler.randFollow()
+
+auto follow,automatically follow,automate twitter
+twitter_handler.autoFollow()

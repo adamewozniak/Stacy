@@ -69,10 +69,11 @@ RECOGNITION, OR TEXT INPUT
 def hear(outty):
     
     output(outty)
-    if readGlobals("WILL_SPEAK") == "True":
+    if readGlobals("TALK") == "True":
         audio_handler.playThis("listening.mp3")
         ret = listenin()
     else:
+        print(">> ")
         ret = notListenin()
     
     return ret

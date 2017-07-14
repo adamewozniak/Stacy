@@ -3,9 +3,10 @@ import time
 
 from SysCommands import output
 #Countdown is pretty much a live time.sleep printout, which rewrites over its output
-def countdown(p,q):
-    i=p
-    j=q
+#p is 
+def countdown(minutes, seconds):
+    i=minutes
+    j=seconds
     k=0
     while True:
         if(j==-1):
@@ -28,3 +29,4 @@ def log(logging, fileCom):
     prefix = ""
     output(prefix + logging)
     fileCom.write(prefix + logging + "\n")
+    

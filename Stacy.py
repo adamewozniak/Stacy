@@ -91,7 +91,7 @@ def main():
             try:
                 
                 command = r.recognize_google(audio)
-                #OUTPUT HELPS TO SHOW COMMAND RECIEVED: 
+                #OUTPUT HELPS TO SHOW COMMAND RECIEVED:    
                 #output(command)
                 if 'stacy' in command.lower():
                     startUp()
