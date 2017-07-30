@@ -9,11 +9,11 @@ import pyglet
 from pygame import mixer
 import pygame 
 
-#Will play a song of any given string, and then stop until song ends
+#Will play a song of any given string, and then stop until song ends -- not fully dev'd
 def playThis(mp3Name):
     mixer.init()
     mixer.music.load(mp3Name)
-    mixer.music.play()
+    mixer.music.play(0)
     while mixer.music.get_busy():
         time.sleep(0.0002)
 

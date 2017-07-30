@@ -1,7 +1,10 @@
+#Talk dictates whether or not the user will have to talk to stacy
 TALK
-True
+False
+#Will_Speak dictates whether or not Stacy has to speak
 WILL_SPEAK
 True
+#Loc_Here dictates the location in which you are using Stacy
 LOC_HERE
 Las Vegas,NV
 

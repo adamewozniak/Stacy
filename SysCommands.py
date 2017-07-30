@@ -12,6 +12,31 @@ import pygame
 import audio_handler
 from audio_handler import say
 
+
+#SysCommands.py DOCS
+
+#SysCommands handles the commands to interface with the Stacy object, and generic other operations.
+
+#deleteFolder(folder):
+
+   #deleteFolder() is used to delete temporary files in Stacy. It should be used to clear out the system on boot.
+   
+#readGlobals(globalreq):
+
+   #readGlobals() returns the string value of any variable in the svs/sysRead/globs.txt file.
+   #It allows for the program to be saved and changed while live, as all variables are read during operations.
+   
+#output(var):
+
+   #output() gets a string, and dictates whether to say it using text, or Stacy's voice. This is dictated by readGlobals().
+   
+#hear(outty):
+   
+   #hear() uses readGlobals(), listenin(), and notListenin() in order to either ask a user what they want to say from the speakers,
+   #or out through text.
+   
+
+
 def deleteFolder(folder):
     #folder = '/path/to/folder'
     for the_file in os.listdir(folder):
@@ -29,7 +54,8 @@ def readGlobals(globalreq):
         lines = search.readlines()
         #strips entire array of rightspace
         for i in range(0, len(lines)):
-            lines[i] = lines[i].rstrip()    
+            lines[i] = lines[i].rstrip()   
+            
             if globalreq in lines:
                 varr = lines[i+1]
                 varstring = str(varr)

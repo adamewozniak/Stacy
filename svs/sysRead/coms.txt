@@ -1,8 +1,8 @@
 hi,hello,hi stacy
-output("hello!")
+SysCommands.output("hello!")
 
 whats up,what's up,how are you, how you doin, wassup,
-output("I'm doing well thank you")
+SysCommands.output("I'm doing well thank you")
 
 delete temp,delete temporary files,remove temporary files, clear temporary
 deleteFolder("temp/")

@@ -1,9 +1,22 @@
 import tweepy
 import time
 
-from SysCommands import output
-#Countdown is pretty much a live time.sleep printout, which rewrites over its output
-#p is 
+import SysCommands
+"""
+
+Debug.py DOCS
+
+
+countdown(minutes, seconds):
+
+   countdown() is pretty much a live time.sleep printout, which rewrites over its output, to look like it is counting down.
+   
+log(logging, fileCom)
+
+   log() recieves logging, a string dictating what it's logging, and fileCom, the fileObject created by another function.
+   It also outputs whatever it recieves, using SysCommands.output().
+
+"""
 def countdown(minutes, seconds):
     i=minutes
     j=seconds
@@ -27,6 +40,6 @@ def countdown(minutes, seconds):
 #Log allows the print command and the write-to command to be called in the same statement. Quite helpful in a bunch of diffferent programs
 def log(logging, fileCom):
     prefix = ""
-    output(prefix + logging)
+    SysCommands.output(prefix + logging)
     fileCom.write(prefix + logging + "\n")
     
