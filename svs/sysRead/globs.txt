@@ -3,7 +3,7 @@ TALK
 False
 #Will_Speak dictates whether or not Stacy has to speak
 WILL_SPEAK
-True
+False
 #Loc_Here dictates the location in which you are using Stacy
 LOC_HERE
 Las Vegas,NV
