@@ -1,4 +1,4 @@
-pygame==1.9.3
+pygame==1.9.4
 tweepy==3.5.0
 SpeechRecognition==3.6.5
 twilio==6.4.1
